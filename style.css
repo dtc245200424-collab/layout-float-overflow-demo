@@ -1,0 +1,54 @@
+/* Reset CSS và thiết lập box-sizing để padding không làm tăng tổng độ rộng */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  margin: 30px 0 10px 0;
+}
+
+/* 1. Kỹ thuật Clearfix bằng overflow: hidden */
+.container {
+  width: 100%;
+  overflow: hidden; /* Tạo Block Formatting Context giúp chứa trọn 2 cột float */
+  border: 2px solid #333;
+  margin-bottom: 20px;
+}
+
+.left-column {
+  width: 50%;
+  float: left;
+  background-color: lightgray;
+  padding: 20px;
+}
+
+.right-column {
+  width: 50%;
+  float: right;
+  background-color: lightgreen;
+  padding: 20px;
+}
+
+/* 2. Khối xử lý tràn nội dung bằng overflow: auto */
+.overflow-box {
+  width: 300px;
+  height: 100px;
+  background-color: lightcoral;
+  padding: 10px;
+  overflow: auto; /* Tự động xuất hiện thanh cuộn khi nội dung vượt quá height: 100px */
+  border: 1px solid #999;
+  border-radius: 4px;
+}
